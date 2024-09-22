@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Title Analyzer",
+    "version": "1.0",
+    "description": "Analyze YouTube video titles to identify the most frequently used keywords, excluding common stop words.",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
+  
